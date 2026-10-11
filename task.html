@@ -10,36 +10,40 @@
     <main>
       <nav>
         <div class="left">Kanban</div>
-        <div class="right"><button>Add new Task</button></div>
+        <div class="right"><button id="toggle-modal">Add new Task</button></div>
       </nav>
       <section class="board">
         <div class="task-column" id="todo">
           <div class="heading">
             <div class="left">To DO</div>
-            <div class="right">Count</div>
+            <div class="right">0</div>
           </div>
-          <div class="task" draggable="true">
-          <h2>Task 1</h2>
-          <p>Description for task</p>
-          <button>Delete</button>
-          </div>
+
         </div>
 
         <div class="task-column" id="progress">
           <div class="heading">
             <div class="left">In Progress</div>
-            <div class="right">Count</div>
+            <div class="right">0</div>
           </div>
         </div>
 
         <div class="task-column" id="done">
           <div class="heading">
             <div class="left">Done</div>
-            <div class="right">Count</div>
+            <div class="right">0</div>
           </div>
         </div>
       </section>
     </main>
+    <div class="modal add-new-task">
+      <div class="bg"></div>
+      <div class="center">
+        <input type="text" placeholder="Task Title"  id="task-title"/>
+        <textarea name="" id="task-Description" placeholder="Task Description"></textarea>
+        <button class="add-task-btn" id="add-new-task">Add Task</button>
+      </div>
+    </div>
     <script src="task.js"></script>
   </body>
 </html>
